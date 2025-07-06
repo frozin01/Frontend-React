@@ -1,7 +1,7 @@
-import { Button } from "./Button"
+import { Button } from "./Components/Button";
 
 export function ButtonSection() {
-    return (
+    return(
         <>
             <Button/>
             <Button/>

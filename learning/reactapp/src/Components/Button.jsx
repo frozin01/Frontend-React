@@ -1,15 +1,21 @@
 import { useState, useEffect } from "react"
 
-export function Button({show, setShow, color}) {
+export function Button({color}) {
 
-    return (
-        <>
-            <button onClick={() => setShow(!show)}
-                style={{backgroundColor: color}}>
-                <p>
-                    {show == true ? "Hide Item" : "Show Item"}
-                </p>
-            </button>
-        </>
+    const [count, setCount] = useState(0)
+
+    useEffect(() => {
+        console.log("page rendered")
+    }, [])
+
+    useEffect(() => {
+        console.log("count is " + count)
+    }, [count])
+
+    return(
+        <button onClick={() => setCount(count + 1)}
+            style={{backgroundColor: color}}>
+            <p>{count}</p>
+        </button>
     )
 }

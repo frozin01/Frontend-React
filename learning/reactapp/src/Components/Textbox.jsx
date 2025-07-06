@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"
 
 export function Textbox() {
 
@@ -6,7 +6,7 @@ export function Textbox() {
 
     function handleEvent(e) {
         setText(e.target.value)
-        console.log("The text has just changed!")
+        console.log("The text has just changed")
         console.log(e)
     }
 
